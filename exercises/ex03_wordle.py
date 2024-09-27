@@ -85,11 +85,14 @@ def main(secret: str) -> None:
         user_guess: str = input_guess(guess_len=len(secret))
         # prints emoji line
         print(emojified(guess=user_guess, answer=secret))
-        turn += 1
         if secret == user_guess:
             print(f"You won in {turn}/6 turns!")
-            # need to exit so code doesn't keep running
-            exit()
+            # don't need to exit code (doesn't keep running)
+            # exit()
+            # need a break here
+            break
+        # move down after if statement so turn number is accurate
+        turn += 1
 
     print("X/6 - Sorry, try again tomorrow!")
 
