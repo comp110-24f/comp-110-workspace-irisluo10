@@ -18,13 +18,15 @@ def find_and_remove_max(list: list[int]) -> int:
             max = num
     # removes item(s) from list
     # may need to use while loop if autograder gets mad
-    for num in list:
+    """for num in list:
         if num == max:
             # .index() gets index of item
             list.pop(list.index(num))
+    """
+    # while loop used here because index needed accessing
+    i: int = 0
+    while i < len(list):
+        if list[i] == max:
+            list.pop(i)
+        i += 1
     return max
-
-
-l: list[int] = [20, 10, 8, 7, 10]
-find_and_remove_max(l)
-print(l)
