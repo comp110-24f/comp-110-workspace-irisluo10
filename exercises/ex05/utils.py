@@ -18,7 +18,8 @@ def only_evens(nums: list[int]) -> list:
 
 
 def sub(nums: list[int], start: int, end: int) -> list:
-    """generate a list which is a subset of the input list, between the specified start index and the end index.
+    """generate a list which is a subset of the input list,
+    between the specified start index and the end index.
     args: nums: list input
         start: start index
         end: end index (non inclusive)
