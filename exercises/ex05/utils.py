@@ -54,8 +54,14 @@ def add_at_index(nums: list[int], new: int, i: int) -> None:
     # shifts everything after i back one
     for n in range(len(nums) - 1, i, -1):
         nums[n] = nums[n - 1]
+    # alternatively (if don't want to index backwards):
+    """n = len(nums)
+    while n - 1 > i:
+        nums[n - 1] = nums[n - 2]
+        n -= 1"""
     nums[i] = new
     print(nums)
+
     # need to return 'None'
     """# prevents 'None' from printing in terminal
     exit()"""
