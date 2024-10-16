@@ -28,5 +28,6 @@ def find_and_remove_max(list: list[int]) -> int:
     while i < len(list):
         if list[i] == max:
             list.pop(i)
-        i += 1
+        else:
+            i += 1
     return max
