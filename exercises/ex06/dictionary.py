@@ -40,7 +40,8 @@ def invert(d: dict[str, str]) -> dict[str, str]:
 
     for key in d:
         value = d[key]
-        # check for duplicate values, which would lead to duplicate keys in the inverted dict
+        # check for duplicate values, which would lead to duplicate keys
+        # in the inverted dict
         if value in inverted_dict:
             raise KeyError(f"error: multiple keys have the same value '{value}'")
         # swap the key and value
@@ -58,7 +59,7 @@ def invert(d: dict[str, str]) -> dict[str, str]:
     2
     {'c': 'c', 'z': 'a', 'y': 'b'}
     {'z': 'a', 'y': 'b', 'x': 'c'}
-    3   
+    3
     """
 
     return d
@@ -128,7 +129,8 @@ def alphabetizer(words: list[str]) -> dict[str, list[str]]:
     for word in words:
         first: str = word[0].lower()  # get the first letter (converted to lowercase)
         if first not in d:
-            # if first letter not in the dictionary, create a new list for words starting with that letter
+            # if first letter not in the dictionary, create a new list for words
+            # starting with that letter
             words_list: list[str] = []
             words_list.append(word)
             d[first] = words_list
